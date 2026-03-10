@@ -57,6 +57,34 @@ img.emoji {
     color: #000; /* Change color if needed */
 }
 </style>
+<style>
+/* Custom CSS to fix header menu overlap with logo */
+.header_bottom {
+    position: relative;
+    z-index: 10; /* Ensure header is above other elements */
+}
+.logo_wrapper {
+    margin-right: 20px; /* Add space between logo and menu */
+    margin-left: -100px; /* Shift logo 10px to the left (adjust as needed) */
+    z-index: 11; /* Keep logo above menu if needed */
+}
+.main_menu {
+    position: relative;
+    z-index: 9; /* Menu below logo */
+    margin-left: auto; /* Push menu to the right */
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .logo_wrapper {
+        margin-right: 10px; /* Reduce space on mobile */
+        margin-left: 0; /* Reset left shift on mobile to avoid issues */
+    }
+    .main_menu {
+        margin-left: 0; /* Adjust for mobile layout */
+    }
+}
+</style>
+
 
 
 
